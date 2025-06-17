@@ -1,0 +1,54 @@
+{
+    "params": [
+        {
+            "title": "输入图片",
+            "kind": "INPUTIMAGE",
+            "nodeid": "2059",
+            "nodetitle": "Load Image",
+            "nodeclass": "LoadImage",
+            "field": "image",
+            "value": "psupload/pslive588.jpg",
+            "extra": "",
+            "visible": false
+        },
+        {
+            "title": "steps",
+            "kind": "SLIDER",
+            "nodeid": "2061",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "steps",
+            "value": "4",
+            "extra": "1,20,1",
+            "visible": true
+        },
+        {
+            "title": "strength",
+            "kind": "SLIDER",
+            "nodeid": "804",
+            "nodetitle": "Apply ControlNet",
+            "nodeclass": "ControlNetApplyAdvanced",
+            "field": "strength",
+            "value": "0.47000000000000003",
+            "extra": "0,1,0.01",
+            "visible": true
+        },
+        {
+            "title": "text",
+            "kind": "PROMPTTEXT",
+            "nodeid": "1269",
+            "nodetitle": "positive",
+            "nodeclass": "CLIPTextEncode",
+            "field": "text",
+            "value": "一只可爱的小鸟，杰作，（（最佳质量），高细节，超细节，高分辨率，HDR，UHD，8K，荒诞，极其细节，逼真，高分辨率，\r",
+            "extra": "",
+            "visible": true
+        }
+    ],
+    "output": {
+        "nodeid": "2060",
+        "nodetitle": "Save Image",
+        "nodeclass": "SaveImage",
+        "folderbatch": null
+    }
+}

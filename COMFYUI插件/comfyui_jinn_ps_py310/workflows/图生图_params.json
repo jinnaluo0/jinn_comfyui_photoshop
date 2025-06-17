@@ -1,0 +1,46 @@
+{
+    "params": [
+        {
+            "title": "输入图片",
+            "kind": "INPUTIMAGE",
+            "nodeid": "10",
+            "nodetitle": "Load Image",
+            "nodeclass": "LoadImage",
+            "field": "image",
+            "value": "psupload/002_00017_(1).png",
+            "extra": "",
+            "visible": false,
+            "valuefolder": "D:\\download\\test",
+            "batchnamed": false
+        },
+        {
+            "title": "采样步数",
+            "kind": "SLIDER",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "steps",
+            "value": 7,
+            "extra": "1,50,1",
+            "visible": true
+        },
+        {
+            "title": "denoise",
+            "kind": "SLIDER",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "denoise",
+            "value": 0.64,
+            "extra": "0,1,0.01",
+            "visible": true
+        }
+    ],
+    "output": {
+        "nodeid": "9",
+        "nodetitle": "Save Image",
+        "nodeclass": "SaveImage",
+        "folderbatch": "D:\\download\\新建文件夹9"
+    },
+    "inputtype": "INPUTIMAGE"
+}

@@ -1,0 +1,64 @@
+{
+    "params": [
+        {
+            "title": "输入图片",
+            "kind": "INPUTIMAGEMASK",
+            "nodeid": "20",
+            "nodetitle": "Load Image",
+            "nodeclass": "LoadImage",
+            "field": "image",
+            "value": "psupload/psmask(1).png",
+            "extra": "",
+            "visible": false
+        },
+        {
+            "title": "seed",
+            "kind": "SEED",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "seed",
+            "value": "879428",
+            "extra": "",
+            "visible": false
+        },
+        {
+            "title": "denoise",
+            "kind": "SLIDER",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "denoise",
+            "value": "1",
+            "extra": "0,1,0.01",
+            "visible": true
+        },
+        {
+            "title": "steps",
+            "kind": "SLIDER",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "steps",
+            "value": "20",
+            "extra": "1,40,1",
+            "visible": true
+        },
+        {
+            "title": "text",
+            "kind": "PROMPTTEXT",
+            "nodeid": "6",
+            "nodetitle": "CLIP Text Encode (Prompt)",
+            "nodeclass": "CLIPTextEncode",
+            "field": "text",
+            "value": "a dog",
+            "extra": "",
+            "visible": true
+        }
+    ],
+    "output": {
+        "nodeid": "9",
+        "nodetitle": "Save Image",
+        "nodeclass": "SaveImage"
+    }
+}

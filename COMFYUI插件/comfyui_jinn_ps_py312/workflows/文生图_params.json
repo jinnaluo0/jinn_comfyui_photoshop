@@ -1,0 +1,55 @@
+{
+    "params": [
+        {
+            "title": "width",
+            "kind": "TEXTFIELD",
+            "nodeid": "5",
+            "nodetitle": "Empty Latent Image",
+            "nodeclass": "EmptyLatentImage",
+            "field": "width",
+            "value": "512",
+            "extra": "",
+            "visible": true
+        },
+        {
+            "title": "height",
+            "kind": "TEXTFIELD",
+            "nodeid": "5",
+            "nodetitle": "Empty Latent Image",
+            "nodeclass": "EmptyLatentImage",
+            "field": "height",
+            "value": "512",
+            "extra": "",
+            "visible": true
+        },
+        {
+            "title": "steps",
+            "kind": "SLIDER",
+            "nodeid": "3",
+            "nodetitle": "KSampler",
+            "nodeclass": "KSampler",
+            "field": "steps",
+            "value": 6,
+            "extra": "0,20,1",
+            "visible": true
+        },
+        {
+            "title": "text",
+            "kind": "PROMPTTEXT",
+            "nodeid": "6",
+            "nodetitle": "CLIP Text Encode (Prompt)",
+            "nodeclass": "CLIPTextEncode",
+            "field": "text",
+            "value": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "extra": "",
+            "visible": true,
+            "valueen": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+        }
+    ],
+    "output": {
+        "nodeid": "9",
+        "nodetitle": "Save Image",
+        "nodeclass": "SaveImage"
+    },
+    "inputtype": "TEXT"
+}
