@@ -6,4 +6,5 @@
 很好安装，文件夹分别放到插件目录里就可以了  
 这是发布在B站上的演示视频 https://www.bilibili.com/video/BV12uMtzbEQM/  
 这是放在百度云上的安装包 https://pan.baidu.com/s/1HsoBS77TT7brl__atZotmg?pwd=cqfg   
-有任何需求或问题，欢迎联系我，微信号：491516541  
+有任何需求或问题，欢迎联系我，微信号：491516541   
+![项目示例图](./教程及相关资料/示例图片.png)  
