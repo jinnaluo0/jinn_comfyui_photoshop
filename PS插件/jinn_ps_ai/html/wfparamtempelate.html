@@ -1,0 +1,47 @@
+<div style="display: flex; ">
+    <sp-label class="wfMgrLabel" >节点及字段:</sp-label>
+    <sp-action-button class="wfMgrNode"  style="flex: 0 0 85%; justify-content: flex-start; " size="s"  silent></sp-action-button>
+  </div>
+  
+  
+  <div style="display: flex; ">
+    <sp-label class="wfMgrLabel">条件类型:</sp-label>
+    <sp-picker  style="flex: 0 0 35%;" class="wfMgrKind"  size="s">
+      <sp-menu slot="options" >
+        <sp-menu-item value="INPUTIMAGE" >图片</sp-menu-item>
+        <sp-menu-item value="INPUTIMAGEMASK" >图片及蒙板</sp-menu-item>
+        <sp-menu-divider ></sp-menu-divider>
+        <sp-menu-item value="PROMPTTEXT" >提示词</sp-menu-item>
+        <sp-menu-item value="FIELDENUM" >字段枚举值</sp-menu-item>
+        <sp-menu-item value="SLIDER" >滑动条</sp-menu-item>
+        <sp-menu-item value="TEXTFIELD" >单行输入框</sp-menu-item>
+        <sp-menu-divider ></sp-menu-divider>
+        <sp-menu-item value="SEED" >随机种子</sp-menu-item>
+        <sp-menu-item value="INPUTMASK" >仅蒙板</sp-menu-item>
+        <sp-menu-item value="INPUTREGION" >局部图片</sp-menu-item>
+        <sp-menu-item value="INPUTREGIONMASK" >局部图片及蒙板</sp-menu-item>
+      </sp-menu>
+    </sp-picker>
+    <sp-label class="wfMgrLabel" data-label-value="true">条件值:</sp-label>
+    <sp-textfield style="flex: 0 0 35%;"   class="wfMgrValue"  maxlength="200" size="s"></sp-textfield>
+  </div>
+
+  <div style="display: flex; ">
+    <sp-label class="wfMgrLabel">条件名称:</sp-label>
+    <sp-textfield  style="flex: 0 0 35%"  maxlength="20" class="wfMgrTitle" size="s"></sp-textfield>
+    <sp-label class="wfMgrLabel" data-label-extra="true">附加数据:</sp-label>
+    <sp-textfield style="flex: 0 0 35%;"  class="wfMgrExtra" maxlength="200" size="s"></sp-textfield>
+  </div>
+
+  <div style=" display: flex;  justify-content: flex-end; margin-top: 5px;">
+    <sp-checkbox  style="margin-right: 10px;" class="wfMgrVisible" size="s" quiet>可见</sp-checkbox>
+    <sp-action-button  title="删除" class="wfMgrDel" size="s"  quiet>
+      <div slot="icon" style="fill: currentColor">
+        <svg viewBox="0 0 36 36" style="width: 18px; height: 18px;"><path d="M4 16h28v4H4z"/></svg>
+      </div>
+    </sp-action-button>
+
+
+
+  </div>
+  <sp-divider size="medium" style="margin-top: 5px; margin-bottom: 5px;"></sp-divider>
