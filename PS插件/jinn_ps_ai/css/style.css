@@ -1,0 +1,67 @@
+/* from https://developer.adobe.com/photoshop/uxp/2022/guides/theme-awareness/
+ * The easiest way to make your plugin theme-aware is to make use of a CSS feature called CSS variables. CSS variables are just what they sound like: a way to have dynamic property definitions in CSS.
+ * 
+ * Luckily, Photoshop exposes a number of theme-specific CSS variables that are perfect for making your plugin respond to the user's theme color choice. These variables are:
+ * 
+ * --uxp-host-background-color
+ * --uxp-host-text-color
+ * --uxp-host-border-color
+ * --uxp-host-widget-hover-text-color
+ * --uxp-host-widget-hover-background-color
+ * --uxp-host-widget-hover-text-color
+ * --uxp-host-widget-hover-border-color
+ * And a few more:
+ * 
+ * --uxp-host-text-color-secondary
+ * --uxp-host-link-hover-text-color
+ * --uxp-host-label-text-color
+ * Finally, there are three dealing with font size:
+ * 
+ * --uxp-host-font-size
+ * --uxp-host-font-size-smaller
+ * --uxp-host-font-size-larger
+ */
+ body {
+  background-color: var(--uxp-host-background-color);
+  color: var(--uxp-host-text-color);
+  border-color: var(--uxp-host-border-color);
+  font-size: var(--uxp-host-font-size);
+   font-family: 'Microsoft YaHei',"SimSun", "Adobe Song Std","Adobe Heiti Std", 'PingFang SC',"Arial", sans-serif;
+  cursor: default !important;
+  
+}
+#wfPromptContainer,#wfManageContainer {
+  display: flex;
+  padding-top: 0px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  height: 100vh;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+#wfParamContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+  overflow-y:auto;
+  padding:0px 10px;
+  flex-direction: column; 
+}
+
+.dynamic-button {
+  flex: 0 0 calc(25% - 2px);/*33.33*/
+  margin: 1px 1px;
+  justify-content: flex-start;
+  padding: 0;
+  
+}
+
+
+
+img {
+  transition: opacity 0.2s ease-in-out;
+}
