@@ -9,16 +9,16 @@
         4，在COMFYUI的网页中运行你的工作流
         5，在PS界面找到“增效工具”--AI---AI，打开插件面板
         6，在插件面板点击“+”号导入刚才运行过的工作流，配置好工作流的参数，进行保存
+        另：想使用语音识别功能的话，需要安装本插件目录下的requirements.txt中的两个python模块
     如果你没有安装COMFYUI：
         1，安装COMFYUI
             1.1下载并解压ComfyUI_windows_portable.rar到你的硬盘中（最好是固态硬盘）
-            1.2，下载models目录到ComfyUI_windows_portable\ComfyUI下，models目录50多个G，注意保证硬盘空间足够
-            1.3，下载ckpts目录到ComfyUI_windows_portable\ComfyUI\custom_nodes\comfyui_controlnet_aux目录下
+            1.2，下载models目录到ComfyUI_windows_portable\ComfyUI下，models目录100多个G，注意保证硬盘空间足够
 
         2，复制comfyui_jinn_ps_py311到ComfyUI_windows_portable\ComfyUI\custom_nodes目录下
         3，复制jinn_ps_ai到你的PS目录的Plug-ins目录下，例如I:\Program Files\Adobe Photoshop 2024\Plug-ins
         4，启动COMFYUI，启动PS
-        5，在插件面板运行工作流
+        5，在PS插件面板中生成图片
         
 问：程序报错怎么办？
 	1，查看PS插件上的报错信息，根据提示进行对应处理。
