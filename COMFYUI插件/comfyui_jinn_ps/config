@@ -1,0 +1,13 @@
+{
+  "user_id": "17731383147",
+  "qwen_vl_models": {
+    "qwen-vl-max": {
+      "input_price": 0.003,
+      "output_price": 0.009
+    },
+    "qwen-vl-plus": {
+      "input_price": 0.0015,
+      "output_price": 0.0045
+    }
+  }
+}
