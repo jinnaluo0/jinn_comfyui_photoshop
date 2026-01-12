@@ -1,0 +1,210 @@
+
+
+    <dialog id="wfManageHelpDialog" style="width: 1200px;height: 1000px;padding: 0px;display: flex;flex-direction: column;">
+      <div style="max-width: 100%;max-height: 100%; overflow: auto; margin: 5px; gap: 5px;">
+        <div style="display:flex;width: 100%; height:50px;">
+          <sp-body style="margin-top: 20px;margin-bottom: 20px; color: #ed0707; font-size: 20px; ">添加工作流：</sp-link>
+        </div>
+        <img src="images/newwf/help1.jpg" alt="Image">
+        <sp-divider size="medium" style="width:100%;margin-top: 10px; margin-bottom: 10px;"></sp-divider>
+        <img src="images/newwf/help2.jpg" alt="Image">
+        <sp-divider size="medium" style="width:100%;margin-top: 10px; margin-bottom: 10px;"></sp-divider>
+        <img src="images/newwf/help3.jpg" alt="Image">
+        <sp-divider size="medium" style="width:100%;margin-top: 10px; margin-bottom: 10px;"></sp-divider>
+        <img src="images/newwf/help4.jpg" alt="Image">
+        <sp-divider size="medium" style="width:100%;margin-top: 10px; margin-bottom: 10px;"></sp-divider>
+
+        <sp-body style="width:100%">如何查看工作流节点的编号：</sp-body>
+        <img src="images/newwf/help7.jpg" alt="Image">
+        <img src="images/newwf/help8.jpg" alt="Image">
+      </div>
+       
+
+        
+    </dialog>
+
+
+    <dialog id="wfMgrRecoverDialog">
+      <div class="dialog-content">
+        <div class="wfmgr-node-list2" >
+          <sp-body  size="xl">已被删除的工作流：</sp-body>
+          <sp-menu id="wfMgrRecoverList" role="listbox"></sp-menu>
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <sp-action-button id="wfMgrRecoverDialogOKButton">恢复</sp-action-button>
+      </div>
+    </dialog>
+
+
+
+    <dialog id="wfMgrNodeOutputDialog">
+      <div class="dialog-content" >
+        <div class="wfmgr-node-list" >
+          <div style="display: flex; justify-content: space-between;">
+            <sp-body  size="xl">节点</sp-body>
+            <sp-textfield maxlength="30" size="m" placeholder="输入名称或编号查询" id="wfMgrNodeOutputDialogSearch" ></sp-textfield>
+          </div>
+          
+          <sp-menu id="wfMgrNodeOutputDialogListNode" role="listbox"></sp-menu>
+        </div>
+
+        <div class="wfmgr-field-list">
+          <sp-body size="xl">字段</sp-body>
+          <sp-menu id="wfMgrNodeOutputDialogListField" role="listbox"></sp-menu>
+        </div>
+      </div>
+
+      <div style="display: flex; margin-top: 10px;">
+        <sp-label style="text-align: right;width: 100px;">输出类型:</sp-label>
+        <sp-picker   id="wfMgrNodeOutputDialogKind" size="s">
+          <sp-menu slot="options" >
+            <sp-menu-item value="OUTPUTIMAGE" selected>图片</sp-menu-item>
+            <sp-menu-item value="OUTPUTTEXT" >文本</sp-menu-item>
+        </sp-picker>
+        <sp-checkbox  style="margin-left: 10px;display: none;"  id="wfMgrNodeOutputDialogTrans" size="s" quiet>翻译</sp-checkbox>
+      </div>
+
+      <div style="display: flex; margin-top: 10px;" id="wfMgrNodeOutputDialogZoomDiv">
+        <sp-label style="text-align: right;width: 100px;">结果图片较小时:</sp-label>
+        <sp-picker  id="wfMgrNodeOutputDialogLess"   size="s">
+          <sp-menu slot="options">
+            <sp-menu-item value="OUTPUT_LESSZOOM" selected>放大到画布</sp-menu-item>
+            <sp-menu-item value="OUTPUT_LESSREAL" >不放大</sp-menu-item>
+          </sp-menu>
+        </sp-picker>
+
+        <sp-label style="text-align: right;width: 100px; padding-left: 20px;">结果图片较大时:</sp-label>
+        <sp-picker  id="wfMgrNodeOutputDialogMore"  size="s">
+          <sp-menu slot="options">
+            <sp-menu-item value="OUTPUT_MOREZOOM" selected>缩小到画布</sp-menu-item>
+            <sp-menu-item value="OUTPUT_MOREREAL" >不缩小,放大画布</sp-menu-item>
+          </sp-menu>
+        </sp-picker>
+
+      </div>
+
+      <div class="dialog-footer">
+        <sp-action-button id="wfMgrNodeOutputDialogOKButton">确定</sp-action-button>
+      </div>
+    </dialog>
+
+    <dialog id="wfMgrNodeFieldDialog">
+      <div class="dialog-content">
+        <div class="wfmgr-node-list" >
+          <div style="display: flex; justify-content: space-between;">
+            <sp-body  size="xl">节点</sp-body>
+            <sp-textfield maxlength="30" size="m" placeholder="输入名称或编号查询" id="wfMgrNodeFieldDialogSearch" ></sp-textfield>
+          </div>
+          
+          <sp-menu id="wfMgrNodeFieldDialogListNode" role="listbox"></sp-menu>
+        </div>
+
+        <div class="wfmgr-field-list">
+          <sp-body size="xl">字段</sp-body>
+          <sp-menu id="wfMgrNodeFieldDialogListField" role="listbox"></sp-menu>
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <sp-action-button id="wfMgrNodeFieldDialogOKButton">确定</sp-action-button>
+      </div>
+    </dialog>
+    
+
+    <div id="toolbarWfManager" style="display: flex; align-items: center; gap: 30px; justify-content: space-between; margin-top: 5px; margin-bottom: 5px;">
+      <div style="display: flex; justify-content:flex-start;">
+        <sp-body id="wfMgrTitle">修改工作流：</sp-body>
+      </div>
+      <div style="display: flex; justify-content:flex-end; ">
+        <sp-action-button id="btnWfManageHelp" title="帮助"><sp-icon name="ui:HelpSmall" size="s" slot="icon"></sp-icon></sp-action-button>
+        <sp-action-button id="btnWfManageReturn" title="返回"><sp-icon name="ui:ChevronLeftMedium" size="s" slot="icon"></sp-icon></sp-action-button>
+      </div>
+      
+    </div>
+
+    <div id="wfManagePathContainer" style="display: flex; margin-bottom: 3px;">
+      <sp-label style="flex: 0 0 20%; text-align: right;">工作流API:</sp-label>
+      <sp-textfield  id="tfwfMgrPath"  style="flex: 0 0 62%"  disabled  size="s"></sp-textfield>
+      <sp-action-button id="btnWfManageOpenFile" style="flex: 0 0 8%"  size="s"><sp-icon name="ui:Magnifier" size="s" slot="icon"></sp-icon></sp-action-button>
+    </div>
+
+
+    
+
+
+    <div style="display: flex; margin-bottom: 3px;">
+      <sp-label style="flex: 0 0 20%; text-align: right;">工作流名称:</sp-label>
+      <sp-textfield id="tfwfMgrName" style="flex: 0 0 70%"  maxlength="12"  size="s"></sp-textfield>
+    </div>
+
+    <div style="display: none; margin-bottom: 3px;" id="divWfMgrCode" >
+      <sp-label style="flex: 0 0 20%; text-align: right;">工作流编号:</sp-label>
+      <sp-textfield id="tfwfMgrCode" style="flex: 0 0 70%"  maxlength="100"  size="s"></sp-textfield>
+    </div>
+
+    <div style="display: flex; margin-bottom: 3px;" id="divWfMgrRel" >
+      <sp-label style="flex: 0 0 20%; text-align: right;">挂靠到:</sp-label>
+      <sp-picker   id="spWfMgrRel"  style="flex: 0 0 70%"  size="s">
+        <sp-menu slot="options" >
+          <sp-menu-item value="" selected></sp-menu-item>
+      </sp-picker>
+    </div>
+    
+    <div style="display: flex; margin-bottom: 5px;">
+      <sp-label style="flex: 0 0 20%; text-align: right;">结果节点:</sp-label>
+      <sp-action-button id="tfwfMgrOutput" style="flex: 0 0 70%; justify-content: flex-start; " silent  size="s"></sp-action-button>
+    </div>
+
+    <div style="display: none; margin-bottom: 5px;" id="divWfMgrOutExtra">
+      <sp-label style="flex: 0 0 20%; text-align: right;">附加结果:</sp-label>
+      <sp-action-button id="tfwfMgrOutExtra" style="flex: 0 0 70%; justify-content: flex-start; " silent  size="s"></sp-action-button>
+    </div>
+
+    <div style="display: none; margin-bottom: 5px;" id="divWfMgrGroup">
+      <sp-label style="flex: 0 0 20%; text-align: right;">工作流分组:</sp-label>
+      <sp-picker  style="flex: 0 0 70%; justify-content: flex-start; " id="spWfMgrGroup"  size="s">
+        <sp-menu slot="options" >
+          <sp-menu-item value="WFGROUP_IMGEDIT" >Kontext</sp-menu-item>
+          <sp-menu-item value="WFGROUP_BASE" >基础功能</sp-menu-item>
+          <sp-menu-item value="WFGROUP_API" >接口服务</sp-menu-item>
+        </sp-menu>
+      </sp-picker>
+    </div>
+
+
+
+
+
+
+
+    <sp-label >工作流条件:</sp-label>
+
+
+    <div id="wfManageContainerInner" style="max-height: 55%;  overflow-y: auto; padding-left: 5px;">
+      
+
+    </div>
+    <div style="display: flex; justify-content:flex-end;margin-top: 5px;">
+      <sp-action-button id="tfwfMgrAddParam" title="添加条件" quiet>
+        <div slot="icon" style="fill: currentColor">
+          <svg viewBox="0 0 36 36" style="width: 18px; height: 18px;">
+            <path d="M18 4v14H4v4h14v14h4V22h14v-4H22V4h-4z" fill="currentColor" />
+          </svg>
+        </div>
+      </sp-action-button>
+    </div>
+
+    
+
+    <sp-divider size="large" style="margin-top: 5px; margin-bottom: 5px;"></sp-divider>
+    <div id="toolbarWfManager" style="display: flex; align-items: center; justify-content: space-between;margin-top: 5px;">
+      <div style="display: flex; ">
+        <sp-button id="btnWfManageDel" variant="secondary" quiet>删除工作流</sp-button>
+        <sp-button id="btnWfManageCopy" variant="secondary" quiet>复制工作流</sp-button>
+        <sp-button id="btnWfManageRecover" variant="secondary" quiet style="display: none;padding-left: 0;">误删恢复</sp-button>
+        <sp-button id="btnWfManageRecoverBuildin" variant="secondary" quiet style="display: none;padding-left: 0;">误删恢复-内置</sp-button>
+      </div>
+      
+      <sp-button id="btnWfManageSave" >保存</sp-button>
+    </div>
+    <div id="wfManageLog" style="color: lightgreen;"></div>

@@ -1,0 +1,168 @@
+<dialog id="wfSettingsDialog" style="width:600px;height:700px;">
+
+  <div style="display: flex; flex-direction: row;  align-items: flex-start;  ">
+    <sp-action-button id="btnSetComfyuiURL" size="s">连接COMFYUI</sp-action-button>
+  </div>
+
+  
+  <div style="display: flex; flex-direction: row;  align-items: flex-start; ">
+    <sp-label style="flex: 0 0 30%;">生图时对其它AI图层:</sp-label>
+    <sp-action-button id="btnSetAILayerOmit" data-value="omit" size="s">不理会</sp-action-button>
+    <sp-action-button id="btnSetAILayerClose" data-value="close" size="s">关闭</sp-action-button>
+    <sp-action-button id="btnSetAILayerDel" data-value="del" size="s">删除</sp-action-button>
+    
+  </div>
+  <sp-divider size="s" style="margin: 5px 0px;"></sp-divider> 
+
+
+
+  <div style="display: flex; flex-direction: row;  align-items: flex-start; ">
+    <sp-label>PS图片:</sp-label>
+    <sp-label style="text-align: right;margin-left: 20px;">放大到</sp-label>
+    <sp-picker  id="spSetMinSize"  style="width:80px" size="s">
+      <sp-menu slot="options">
+        <sp-menu-item value="-1">不放大</sp-menu-item>
+        <sp-menu-item value="512" >512</sp-menu-item>
+        <sp-menu-item value="768" >768</sp-menu-item>
+      </sp-menu>
+    </sp-picker>
+    <sp-label style="text-align: right;margin-left: 20px;">缩小至</sp-label>
+    <sp-picker id="spSetMaxSize" style="width:80px" size="s">
+      <sp-menu slot="options">
+        <sp-menu-item  value="-1">不缩小</sp-menu-item>
+        <sp-menu-item value="1920">1920</sp-menu-item>
+        <sp-menu-item value="1536">1536</sp-menu-item>
+        <sp-menu-item value="1280">1280</sp-menu-item>
+        <sp-menu-item value="1024" >1024</sp-menu-item>
+        <sp-menu-item value="960" >960</sp-menu-item>
+        <sp-menu-item value="768">768</sp-menu-item>
+      </sp-menu>
+    </sp-picker>
+  </div>
+  <sp-divider size="s" style="margin: 5px 0px;"></sp-divider>
+
+
+  <div style="display: none; flex-direction: row;  align-items: flex-start; ">
+    <sp-checkbox id="cbSetLoadTempImage" style="margin-right: 10px;"  size="s" quiet>记录中间结果(记录工作流中的"预览图片")</sp-checkbox>
+  </div>
+  <sp-divider size="s" style="margin: 5px 0px; display: none;"></sp-divider>
+
+  <div style="display: flex; flex-direction: column;  align-items: flex-start; width: 100%;">
+    <div style="display: flex;  width: 100%;justify-content: space-between;">
+      <sp-checkbox id="cbSetTransEnable" style="margin-right: 10px;"  size="s" quiet>翻译</sp-checkbox>
+    </div>
+  </div>
+  <sp-divider size="s" style="margin: 5px 0px;"></sp-divider>
+
+  <div style="display: flex; flex-direction: column;  align-items: flex-start; width: 100%;">
+    <div style="display: flex;  width: 100%;justify-content: space-between;">
+      <sp-body  style="margin-right: 10px;"  size="s" quiet>百度通用文本翻译：</sp-body>
+      <sp-action-button id="btnSetTransBaiduHelp" title="帮助" quiet ><sp-icon name="ui:HelpSmall" size="s" slot="icon"></sp-icon></sp-action-button>
+    </div>
+    
+    <div style="display: flex;  width: 100%;">
+      <sp-label style="width: 20%;">百度APPID:</sp-label>
+      <sp-textfield id="cbSetTransBaiduAppID" style="flex-grow:1;padding: 0px;"   maxlength="200" size="s"></sp-textfield>
+    </div>
+    <div style="display: flex;  width: 100%;">
+      <sp-label style="width: 20%;" >百度密钥:</sp-label>
+      <sp-textfield id="cbSetTransBaiduAppKey"style="flex-grow:1;"   maxlength="200"  size="s"></sp-textfield>
+    </div>
+  </div>
+
+  <sp-divider size="s" style="margin: 5px 0px;"></sp-divider>
+
+
+  <div style="display: none; flex-direction: column;  align-items: flex-start; width: 100%;">
+    <div style="display: flex;  width: 100%;justify-content: space-between;">
+      <sp-body  style="margin-right: 10px;"  size="s" quiet>通义千问:</sp-body>
+      <sp-action-button id="btnSetQWenHelp" title="帮助" quiet ><sp-icon name="ui:HelpSmall" size="s" slot="icon"></sp-icon></sp-action-button>
+    </div>
+    <div style="display: flex;  width: 100%;">
+      <sp-label style="width: 20%;">API-Key:</sp-label>
+      <sp-textfield id="tfSetQWenAPIKey" style="flex-grow:1;padding: 0px;"   maxlength="200" size="s"></sp-textfield>
+    </div>
+  </div>
+  <sp-divider size="s" style="display: none;margin: 5px 0px;"></sp-divider>
+
+  <div style="display: flex; flex-direction: column;  align-items: flex-start; width: 100%;">
+    <div style="display: flex;  width: 100%;justify-content: space-between;">
+      <sp-body  style="margin-right: 10px;"  size="s" quiet>智谱(反推，扩写):</sp-body>
+      <sp-action-button id="btnSetZhipuHelp" title="帮助" quiet ><sp-icon name="ui:HelpSmall" size="s" slot="icon"></sp-icon></sp-action-button>
+    </div>
+    <div style="display: flex;  width: 100%;">
+      <sp-label style="width: 20%;">API-Key:</sp-label>
+      <sp-textfield id="tfSetZhipuAPIKey" style="flex-grow:1;padding: 0px;"   maxlength="200" size="s"></sp-textfield>
+    </div>
+  </div>
+  <sp-divider size="s" style="display: flex;margin: 5px 0px;"></sp-divider>
+
+
+
+  <div style="display: none; flex-direction: row;  align-items: flex-start; ">
+    <sp-label style="width: 20%;" >反推工作流:</sp-label>
+    <sp-picker  id="spSetReverse"  style="flex-grow:1;" size="s">
+      <sp-menu slot="options">
+      </sp-menu>
+    </sp-picker>
+  </div>
+  <sp-divider size="s" style="display: none;margin: 5px 0px;"></sp-divider>
+
+
+
+  <div style="display: none;  width: 100%;justify-content:flex-start;">
+    <sp-checkbox id="cbSetSoundPromptEnabled" style="margin-right: 10px;"  size="s" quiet>语音输入提示词</sp-checkbox>
+  </div>
+  <sp-divider size="s" style="margin: 5px 0px; display: none;"></sp-divider>
+
+  <div style="display: flex; flex-direction: row;  align-items: flex-start; ">
+    <sp-label style="flex: 0 0 20%;">生图方式:</sp-label>
+    <sp-action-button id="btnSetPromptCommon" data-value="COMMON" size="s">普通生图</sp-action-button>
+    <sp-action-button id="btnSetPromptBatch" data-value="BATCH" size="s">批量生图</sp-action-button>
+    <sp-action-button id="btnSetPromptLive" data-value="LIVE" size="s">实时绘画</sp-action-button>
+  </div>
+
+
+
+
+  <dialog id="cbSetTransHelpBaiduDialog" style="width: 1200px;height: 1000px;padding: 0px;display: flex;flex-direction: column;">
+    <div style="display:flex;width: 100%; height:90px;justify-content:center;">
+      <sp-link size="xl" href="https://fanyi-api.baidu.com/product/11" style="margin-top: 20px;margin-bottom: 20px; color: #ed0707; font-size: 30px; height: 50px;">点击这里，申请百度翻译</sp-link>
+    </div>
+    
+
+    <div style="max-width: 100%;max-height: 100%; overflow: auto; margin: 2px;">
+      <img  src="images/baidu/1.jpeg" alt="Image">
+      <img  src="images/baidu/2.jpeg" alt="Image">
+      <img  src="images/baidu/3.jpeg" alt="Image">
+      <img  src="images/baidu/4.jpeg" alt="Image">
+      <img  src="images/baidu/5.jpeg" alt="Image">
+      <img  src="images/baidu/6.jpeg" alt="Image">
+      <img  src="images/baidu/7.jpeg" alt="Image">
+      
+    </div>
+  </dialog>
+
+  
+  <dialog id="setQWenHelpDialog" style="width: 1200px;height: 1000px;padding: 0px;display: flex;flex-direction: column;">
+    <div style="display:flex;width: 100%; height:90px;justify-content:center;">
+      <sp-link size="xl" href="https://bailian.console.aliyun.com/?tab=model#/efm/model_experience_center/vision" style="margin-top: 20px;margin-bottom: 20px; color: #ed0707; font-size: 30px; height: 50px;">点击这里，申请通义千问API-Key</sp-link>
+    </div>
+    <div style="max-width: 100%;max-height: 100%; overflow: auto; margin: 2px;">
+    </div>
+  </dialog>
+
+  <dialog id="setZhipuHelpDialog" style="width: 1200px;height: 1000px;padding: 0px;display: flex;flex-direction: column;">
+    <div style="display:flex;width: 100%; height:90px;justify-content:center;">
+      <sp-link size="xl" href="https://www.bigmodel.cn/console/overview" style="margin-top: 20px;margin-bottom: 20px; color: #ed0707; font-size: 30px; height: 50px;">点击这里，申请智谱API-Key</sp-link>
+    </div>
+    <div style="max-width: 100%;max-height: 100%; overflow: auto; margin: 2px;">
+      <img  src="images/zhipu/1.jpg" alt="Image">
+    </div>
+  </dialog>
+
+</dialog>
+
+
+
+  

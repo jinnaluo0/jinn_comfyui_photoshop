@@ -1,0 +1,14 @@
+<dialog id="wfConnectDialog" style="display:flex;width: 400px;height: 250px;" >
+    <div style="display: flex;flex-direction: column;">
+        <sp-body>COMFYUI URL:</sp-body>
+        <div style="display: flex;align-items: center;width: 100%;">
+            <sp-textfield id="tfComfyuiURL" style="width: 80%;" value="http://127.0.0.1:8188"  maxlength="100"></sp-textfield>
+            <sp-action-button id="btnResetComfyuiURL" style="width: 100px" quiet>恢复默认</sp-action-button>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <sp-button id="btnConnect" style="width: 50%; height: 38px; margin-top: 20px;">连接</sp-button>
+        </div>
+        <div id="divTestInfo"  style="color:#ff5555;  font-size: 14px; margin-top: 10px; width: 100%;"></div>
+    </div>
+    
+</dialog>

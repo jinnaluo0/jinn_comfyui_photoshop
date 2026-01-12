@@ -1,0 +1,81 @@
+{
+  "id": "jinn_ps_ai",
+  "name": "深山佩奇",
+  "version": "25.07.24",
+  "main": "index.html",
+  "manifestVersion": 5,
+  "requiredPermissions": {
+    "network": {
+      "domains": "all"
+    },
+    "allowCodeGenerationFromStrings": true,
+    "clipboard": "readAndWrite",
+    "localFileSystem": "fullAccess",
+    "launchProcess": {
+      "schemes": ["http","https"],
+      "extensions": [".svg",".png",".jpg"]
+    },
+    "webview": {
+      "allow": "yes",
+      "allowLocalRendering": "yes",
+      "domains": "all",
+      "enableMessageBridge": "localAndRemote"
+    }
+  },
+  "host": {
+    "app": "PS",
+    "minVersion": "24.0.0",
+    "data": {
+      "apiVersion": 2
+    }
+  },
+  "resources": [
+    {
+      "path": "images",
+      "includes": ["**/*"]
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel","id": "jinn_ps_ai.panel_main",
+      "label": {"default": "ComfyUI 25.7.24"},
+      "minimumSize": {"width": 420,"height": 300},
+      "maximumSize": {"width": 2000,"height": 2000},
+      "preferredDockedSize": {"width": 420,"height": 660},
+      "preferredFloatingSize": {"width": 420,"height": 780},
+      "icons": [
+        {"width": 32,"height": 32,"path": "icons/dark.png","scale": [1,2],"theme": ["dark","darkest"],"species": ["generic"]},
+        {"width": 32,"height": 32,"path": "icons/light.png","scale": [1,2],"theme": ["lightest","light"],"species": ["generic"]}
+      ]
+    }
+  ],
+  "icons": [
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/dark.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "darkest",
+        "dark",
+        "medium"
+      ]
+    },
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/light.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "lightest",
+        "light"
+      ]
+    }
+  ]
+}

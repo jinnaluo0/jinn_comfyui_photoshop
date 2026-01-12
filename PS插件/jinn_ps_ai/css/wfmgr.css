@@ -1,0 +1,65 @@
+
+.wfMgrNode{
+  padding: 0 5px; 
+}
+.wfMgrLabel{
+  flex: 0 0 15%; text-align: right;justify-content: flex-end;
+}
+
+#wfMgrRecoverDialog {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.wfmgr-node-list2 {
+  flex: 1;
+  border-width: 1px;
+  padding: 10px;
+  overflow-y: auto;
+  border: 1px solid ;
+  border-radius: 8px;
+}
+
+#wfMgrNodeFieldDialog,#wfMgrNodeOutputDialog {
+  width: 800px;
+  height: 600px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.dialog-content {
+  display: flex;
+  flex: 1;
+  gap: 5px;
+}
+
+.wfmgr-node-list, .wfmgr-field-list {
+  border-width: 1px;
+  padding: 10px;
+  overflow-y: auto;
+  border: 1px solid ;
+  border-radius: 8px;
+}
+.wfmgr-node-list{
+  flex: 0 0 55%; 
+  margin-right: 5px;
+}
+.wfmgr-field-list{
+  flex: 1;
+  margin-left: 5px;
+}
+
+.dialog-footer {
+  margin-top: 5px;
+  text-align: right;
+}
+
+
+
+
+
